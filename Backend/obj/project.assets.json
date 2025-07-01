@@ -4067,11 +4067,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\NZWalks\\NZWalks.API\\NZWalks.API.csproj",
+      "projectUniqueName": "D:\\Projects\\TourInfo\\Backend\\NZWalks.API.csproj",
       "projectName": "NZWalks.API",
-      "projectPath": "D:\\Projects\\NZWalks\\NZWalks.API\\NZWalks.API.csproj",
+      "projectPath": "D:\\Projects\\TourInfo\\Backend\\NZWalks.API.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\NZWalks\\NZWalks.API\\obj\\",
+      "outputPath": "D:\\Projects\\TourInfo\\Backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -4190,13 +4190,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
-    }
-  ]
+  }
 }

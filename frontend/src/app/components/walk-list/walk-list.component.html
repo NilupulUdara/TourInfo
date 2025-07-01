@@ -1,0 +1,24 @@
+<div class="container mx-auto p-4">
+  <h2 class="text-2xl font-bold mb-4">Walks</h2>
+  <div class="mb-4 flex space-x-4">
+    <input type="text" [(ngModel)]="filterQuery" placeholder="Filter by name" class="rounded-md border-gray-300 shadow-sm">
+    <button (click)="getWalks()" class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">Filter</button>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div *ngFor="let walk of walks" class="bg-white p-4 rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold">{{ walk.name }}</h3>
+      <p class="text-gray-600">{{ walk.description }}</p>
+      <p class="text-gray-600">Length: {{ walk.lengthInKm }} km</p>
+      <p class="text-gray-600">Difficulty: {{ walk.difficulty.name }}</p>
+      <p class="text-gray-600">Region: {{ walk.region.name }}</p>
+      <img *ngIf="walk.walkImageUrl" [src]="walk.walkImageUrl" alt="{{ walk.name }}" class="mt-2 w-full h-48 object-cover rounded">
+      <div class="mt-4 space-x-2">
+        <a [routerLink]="['/walks', walk.id]" class="text-blue-600 hover:underline">View</a>
+        <button *ngIf="canEdit" (click)="deleteWalk(walk.id)" class="text-red-600 hover:underline">Delete</button>
+      </div>
+    </div>
+  </div>
+  <div class="mt-6">
+    <button *ngIf="canEdit" [routerLink]="['/walks', 'new']" class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">Add Walk</button>
+  </div>
+</div>
