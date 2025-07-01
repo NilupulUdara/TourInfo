@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NZWalks.API.Data;
 using NZWalks.API.Models.DTO;
@@ -16,6 +17,7 @@ namespace NZWalks.API.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Writer")]
         public IActionResult GetAll()
         {
             var difficulties = dbContext.Difficulties.Select(d => new DifficultyDto

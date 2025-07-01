@@ -7,7 +7,7 @@ import { DifficultyDto } from '../models/models.module';
   providedIn: 'root'
 })
 export class DifficultyService {
-  private apiUrl = environment.apiUrl + '/api/Difficulties';
+  private apiUrl = environment.apiUrl + '/api/Difficulty';
 
   constructor(private http: HttpClient) {}
 
