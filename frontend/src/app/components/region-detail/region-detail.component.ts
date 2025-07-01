@@ -1,7 +1,7 @@
 // src/app/components/region-detail/region-detail.component.ts
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { RegionService } from '../../services/region.service';
 import { RegionDto } from '../../models/models.module';
 import { CommonModule } from '@angular/common';
@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-region-detail',
   standalone: true,
   templateUrl: './region-detail.component.html',
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterLink],
 })
 export class RegionDetailComponent implements OnInit {
   regionForm: FormGroup;

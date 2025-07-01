@@ -4,8 +4,8 @@
     <div class="container mx-auto flex justify-between items-center px-4 py-3">
       <a routerLink="/" class="text-2xl font-bold">Tour Info</a>
       <div class="flex space-x-4 items-center">
-        <a routerLink="/regions" class="hover:underline">Regions</a>
         <a routerLink="/walks" class="hover:underline">Walks</a>
+        <a routerLink="/regions" class="hover:underline">Regions</a>
         <a routerLink="/login" *ngIf="!(isLoggedIn$ | async)" class="hover:underline">Login</a>
         <a routerLink="/register" *ngIf="!(isLoggedIn$ | async)" class="hover:underline">Register</a>
         <button 

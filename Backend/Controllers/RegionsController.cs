@@ -31,11 +31,12 @@ namespace NZWalks.API.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Reader")]
+        [Authorize(Roles = "Reader,Writer")]
+
         public async Task<IActionResult> GetAll()
         {
             try
-            {   
+            {
                 var regionsDomain = await regionRepository.GetAllAsync();
 
                 logger.LogInformation($"Finished GetAllRegion request with data: {JsonSerializer.Serialize(regionsDomain)}");
